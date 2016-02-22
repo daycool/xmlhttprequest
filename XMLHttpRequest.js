@@ -256,6 +256,9 @@
 				}
 
 				nState  = oRequest.readyState;
+				if(oRequest.onload){
+					oRequest.onload.apply(oRequest);
+				}
 			}
 		};
 	};
